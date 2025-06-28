@@ -1,0 +1,839 @@
+@keyframes falling-heart {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(1) rotate(-10deg);
+  }
+  10% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(85vh) scale(1.1) rotate(10deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100vh) scale(0.9) rotate(20deg);
+  }
+}
+
+.animate-falling-heart {
+  animation: falling-heart linear;
+  animation-fill-mode: both;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+}
+
+@layer utilities {
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes bounce-up {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-100vh);
+      opacity: 0;
+    }
+  }
+
+  @keyframes heartbeat {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+
+  @keyframes twinkle {
+    0%,
+    100% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes spin-slow {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes float-petal {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 0.8;
+    }
+    50% {
+      transform: translateY(-20px) rotate(180deg);
+      opacity: 0.4;
+    }
+    100% {
+      transform: translateY(0) rotate(360deg);
+      opacity: 0.8;
+    }
+  }
+
+  @keyframes fall-rose {
+    0% {
+      transform: translateY(-50px) rotate(0deg);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
+  @keyframes spin-gentle {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes sway {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(10px);
+    }
+  }
+
+  @keyframes float-heart {
+    0%,
+    100% {
+      transform: translateY(0) scale(1);
+      opacity: 0.7;
+    }
+    50% {
+      transform: translateY(-10px) scale(1.1);
+      opacity: 0.3;
+    }
+  }
+
+  @keyframes rose-bloom {
+    0% {
+      transform: scale(0.95) rotate(0deg);
+      opacity: 0.9;
+    }
+    50% {
+      transform: scale(1.02) rotate(1deg);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(0.95) rotate(0deg);
+      opacity: 0.9;
+    }
+  }
+
+  @keyframes fade-in-scale {
+    from {
+      opacity: 0;
+      transform: scale(0.8) translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+
+  @keyframes slide-in-from-heart {
+    from {
+      opacity: 0;
+      transform: translateY(-30px) scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  @keyframes message-appear {
+    from {
+      opacity: 0;
+      transform: translateY(40px) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  @keyframes divider-expand {
+    from {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+    to {
+      opacity: 1;
+      transform: scaleX(1);
+    }
+  }
+
+  @keyframes gift-shake {
+    0%,
+    100% {
+      transform: rotate(0deg) scale(1);
+    }
+    10% {
+      transform: rotate(-5deg) scale(1.05);
+    }
+    20% {
+      transform: rotate(5deg) scale(1.05);
+    }
+    30% {
+      transform: rotate(-5deg) scale(1.1);
+    }
+    40% {
+      transform: rotate(5deg) scale(1.1);
+    }
+    50% {
+      transform: rotate(-3deg) scale(1.15);
+    }
+    60% {
+      transform: rotate(3deg) scale(1.15);
+    }
+    70% {
+      transform: rotate(-2deg) scale(1.1);
+    }
+    80% {
+      transform: rotate(2deg) scale(1.1);
+    }
+    90% {
+      transform: rotate(0deg) scale(1.05);
+    }
+  }
+
+  @keyframes gift-lid-open {
+    0% {
+      transform: translateY(0) rotate(0deg) scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: translateY(-60px) rotate(-25deg) scale(1.2);
+      opacity: 0.6;
+    }
+    100% {
+      transform: translateY(-120px) rotate(-45deg) scale(0.8);
+      opacity: 0;
+    }
+  }
+
+  @keyframes gift-content-reveal {
+    0% {
+      transform: scale(0) translateY(30px);
+      opacity: 0;
+    }
+    30% {
+      transform: scale(1.5) translateY(15px);
+      opacity: 0.7;
+    }
+    60% {
+      transform: scale(2) translateY(0);
+      opacity: 0.9;
+    }
+    100% {
+      transform: scale(2.5) translateY(-10px);
+      opacity: 1;
+    }
+  }
+
+  @keyframes confetti-burst {
+    0% {
+      transform: scale(0) rotate(0deg);
+      opacity: 1;
+    }
+    20% {
+      transform: scale(2) rotate(90deg);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.5) rotate(270deg) translate(150px, -100px);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1) rotate(720deg) translate(300px, -200px);
+      opacity: 0;
+    }
+  }
+
+  @keyframes gift-sparkle-burst {
+    0% {
+      transform: scale(0) translate(0, 0);
+      opacity: 1;
+    }
+    25% {
+      transform: scale(3) translate(50px, -50px);
+      opacity: 0.9;
+    }
+    50% {
+      transform: scale(2) translate(100px, -100px);
+      opacity: 0.7;
+    }
+    75% {
+      transform: scale(1.5) translate(150px, -150px);
+      opacity: 0.4;
+    }
+    100% {
+      transform: scale(1) translate(200px, -200px);
+      opacity: 0;
+    }
+  }
+
+  @keyframes gift-explosion {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(3);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(5);
+      opacity: 0;
+    }
+  }
+
+  @keyframes gift-mega-burst {
+    0% {
+      transform: scale(0) rotate(0deg);
+      opacity: 1;
+    }
+    25% {
+      transform: scale(2) rotate(60deg);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.5) rotate(120deg) translate(var(--x), var(--y));
+      opacity: 0.8;
+    }
+    75% {
+      transform: scale(1.2) rotate(180deg) translate(calc(var(--x) * 1.5), calc(var(--y) * 1.5));
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(1) rotate(240deg) translate(calc(var(--x) * 2), calc(var(--y) * 2));
+      opacity: 0;
+    }
+  }
+
+  @keyframes envelope-shake {
+    0%,
+    100% {
+      transform: rotate(0deg) scale(1);
+    }
+    10% {
+      transform: rotate(-3deg) scale(1.05);
+    }
+    20% {
+      transform: rotate(3deg) scale(1.05);
+    }
+    30% {
+      transform: rotate(-3deg) scale(1.1);
+    }
+    40% {
+      transform: rotate(3deg) scale(1.1);
+    }
+    50% {
+      transform: rotate(-2deg) scale(1.05);
+    }
+    60% {
+      transform: rotate(2deg) scale(1.05);
+    }
+    70% {
+      transform: rotate(-1deg) scale(1.02);
+    }
+    80% {
+      transform: rotate(1deg) scale(1.02);
+    }
+    90% {
+      transform: rotate(0deg) scale(1.01);
+    }
+  }
+
+  @keyframes envelope-open {
+    0% {
+      transform: rotateX(0deg);
+      transform-origin: bottom;
+    }
+    50% {
+      transform: rotateX(-15deg);
+      transform-origin: bottom;
+    }
+    100% {
+      transform: rotateX(-90deg);
+      transform-origin: bottom;
+    }
+  }
+
+  @keyframes letter-slide-out {
+    0% {
+      transform: translateY(0) scale(0.8);
+      opacity: 0;
+    }
+    50% {
+      transform: translateY(-30px) scale(0.9);
+      opacity: 0.7;
+    }
+    100% {
+      transform: translateY(-60px) scale(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes letter-unfold {
+    0% {
+      transform: scale(0.3) rotateY(-15deg);
+      opacity: 0;
+    }
+    30% {
+      transform: scale(0.6) rotateY(-8deg);
+      opacity: 0.5;
+    }
+    60% {
+      transform: scale(0.8) rotateY(-3deg);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1) rotateY(0deg);
+      opacity: 1;
+    }
+  }
+
+  @keyframes hearts-float-up {
+    0% {
+      transform: translateY(0) scale(0.5);
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100px) scale(1.2);
+      opacity: 0;
+    }
+  }
+
+  @keyframes letter-glow {
+    0%,
+    100% {
+      box-shadow: 0 0 20px rgba(255, 182, 193, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 40px rgba(255, 182, 193, 0.6);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 1s ease-out;
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 1s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 1s ease-out 0.5s both;
+  }
+
+  .animate-scale-in {
+    animation: scale-in 0.8s ease-out 0.3s both;
+  }
+
+  .animate-bounce-up {
+    animation: bounce-up 3s linear;
+  }
+
+  .animate-heartbeat {
+    animation: heartbeat 1.5s ease-in-out infinite;
+  }
+
+  .animate-twinkle {
+    animation: twinkle 2s ease-in-out infinite;
+  }
+
+  .animate-spin-slow {
+    animation: spin-slow 3s linear infinite;
+  }
+
+  .animate-float-petal {
+    animation: float-petal 4s ease-in-out infinite;
+  }
+
+  .animate-fall-rose {
+    animation: fall-rose 5s linear infinite, sway 3s ease-in-out infinite;
+  }
+
+  .animate-spin-gentle {
+    animation: spin-gentle 4s linear infinite;
+  }
+
+  .animate-float-heart {
+    animation: float-heart 3s ease-in-out infinite;
+  }
+
+  .animate-rose-bloom {
+    animation: rose-bloom 4s ease-in-out infinite;
+  }
+
+  .animate-fade-in-scale {
+    animation: fade-in-scale 1.2s ease-out both;
+  }
+
+  .animate-slide-in-from-heart {
+    animation: slide-in-from-heart 1s ease-out both;
+  }
+
+  .animate-message-appear {
+    animation: message-appear 0.8s ease-out both;
+  }
+
+  .animate-divider-expand {
+    animation: divider-expand 0.8s ease-out both;
+  }
+
+  .animate-gift-shake {
+    animation: gift-shake 0.8s ease-in-out;
+  }
+
+  .animate-gift-lid-open {
+    animation: gift-lid-open 1.2s ease-out forwards;
+  }
+
+  .animate-gift-content-reveal {
+    animation: gift-content-reveal 1s ease-out 0.8s forwards;
+  }
+
+  .animate-confetti-burst {
+    animation: confetti-burst 2s ease-out forwards;
+  }
+
+  .animate-gift-sparkle-burst {
+    animation: gift-sparkle-burst 1.5s ease-out forwards;
+  }
+
+  .animate-gift-explosion {
+    animation: gift-explosion 1.5s ease-out forwards;
+  }
+
+  .animate-gift-mega-burst {
+    animation: gift-mega-burst 3s ease-out forwards;
+  }
+
+  .animate-envelope-shake {
+    animation: envelope-shake 0.8s ease-in-out;
+  }
+
+  .animate-envelope-open {
+    animation: envelope-open 1.2s ease-out forwards;
+  }
+
+  .animate-letter-slide-out {
+    animation: letter-slide-out 1s ease-out 0.8s forwards;
+  }
+
+  .animate-letter-unfold {
+    transform: scale(0.3) rotateY(-15deg);
+    opacity: 0;
+    animation: letter-unfold 1.2s ease-out 1.5s forwards;
+  }
+
+  .animate-hearts-float-up {
+    animation: hearts-float-up 3s ease-out forwards;
+  }
+
+  .animate-letter-glow {
+    animation: letter-glow 2s ease-in-out infinite;
+  }
+
+  /* Large Rose Container */
+  .rose-container-large {
+    width: 700px;
+    height: 600px;
+    max-width: 85vw;
+    max-height: 70vh;
+  }
+
+  .rose-shape-large {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    animation: rose-bloom 8s ease-in-out infinite;
+  }
+
+  /* Large Outer petals */
+  .rose-petal-large {
+    position: absolute;
+    width: 160px;
+    height: 100px;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1), 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .rose-petal-1 {
+    top: 8%;
+    left: 50%;
+    transform: translateX(-50%) rotate(0deg);
+    animation: rose-bloom 7s ease-in-out infinite;
+  }
+
+  .rose-petal-2 {
+    top: 22%;
+    right: 12%;
+    transform: rotate(60deg);
+    animation: rose-bloom 7s ease-in-out infinite 0.8s;
+  }
+
+  .rose-petal-3 {
+    bottom: 22%;
+    right: 12%;
+    transform: rotate(120deg);
+    animation: rose-bloom 7s ease-in-out infinite 1.6s;
+  }
+
+  .rose-petal-4 {
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg);
+    animation: rose-bloom 7s ease-in-out infinite 2.4s;
+  }
+
+  .rose-petal-5 {
+    bottom: 22%;
+    left: 12%;
+    transform: rotate(240deg);
+    animation: rose-bloom 7s ease-in-out infinite 3.2s;
+  }
+
+  .rose-petal-6 {
+    top: 22%;
+    left: 12%;
+    transform: rotate(300deg);
+    animation: rose-bloom 7s ease-in-out infinite 4s;
+  }
+
+  /* Large Middle petals */
+  .rose-petal-mid-large {
+    position: absolute;
+    width: 120px;
+    height: 80px;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.15), 0 3px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  .rose-petal-mid-1 {
+    top: 18%;
+    left: 50%;
+    transform: translateX(-50%) rotate(30deg);
+    animation: rose-bloom 6s ease-in-out infinite 0.5s;
+  }
+
+  .rose-petal-mid-2 {
+    top: 32%;
+    right: 22%;
+    transform: rotate(90deg);
+    animation: rose-bloom 6s ease-in-out infinite 1.2s;
+  }
+
+  .rose-petal-mid-3 {
+    bottom: 32%;
+    left: 22%;
+    transform: rotate(210deg);
+    animation: rose-bloom 6s ease-in-out infinite 1.9s;
+  }
+
+  .rose-petal-mid-4 {
+    bottom: 18%;
+    left: 50%;
+    transform: translateX(-50%) rotate(270deg);
+    animation: rose-bloom 6s ease-in-out infinite 2.6s;
+  }
+
+  /* Large Inner petals */
+  .rose-petal-inner-large {
+    position: absolute;
+    width: 80px;
+    height: 55px;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2), 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .rose-petal-inner-1 {
+    top: 32%;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    animation: rose-bloom 5s ease-in-out infinite 0.7s;
+  }
+
+  .rose-petal-inner-2 {
+    top: 42%;
+    right: 32%;
+    transform: rotate(135deg);
+    animation: rose-bloom 5s ease-in-out infinite 1.4s;
+  }
+
+  .rose-petal-inner-3 {
+    bottom: 32%;
+    left: 32%;
+    transform: rotate(225deg);
+    animation: rose-bloom 5s ease-in-out infinite 2.1s;
+  }
+
+  /* Large Center */
+  .rose-center-large {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3), 0 2px 6px rgba(0, 0, 0, 0.3);
+    animation: rose-bloom 4s ease-in-out infinite;
+  }
+
+  @media (max-width: 768px) {
+    .rose-container-large {
+      width: 500px;
+      height: 450px;
+    }
+
+    .rose-petal-large {
+      width: 120px;
+      height: 75px;
+    }
+
+    .rose-petal-mid-large {
+      width: 90px;
+      height: 60px;
+    }
+
+    .rose-petal-inner-large {
+      width: 60px;
+      height: 40px;
+    }
+
+    .rose-center-large {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .rose-container-large {
+      width: 380px;
+      height: 350px;
+    }
+
+    .rose-petal-large {
+      width: 100px;
+      height: 65px;
+    }
+
+    .rose-petal-mid-large {
+      width: 75px;
+      height: 50px;
+    }
+
+    .rose-petal-inner-large {
+      width: 50px;
+      height: 35px;
+    }
+
+    .rose-center-large {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}

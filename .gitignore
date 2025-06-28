@@ -1,0 +1,67 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+
+# next.js
+/.next/
+# Node
+node_modules/
+
+# Build output
+.next/
+/out/
+
+
+# Logs
+npm-debug.log*
+# production
+/build
+
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.*
+
+# VSCode
+.vscode/
+
+# Others
+*.local
+*.log
+coverage/
+
+# Mac system files
+Icon?
+
+# Optional: lock files
+package-lock.json
+yarn.lock
+
+# Optional: test coverage
+coverage/
+
+# Optional: misc
+*.tgz
+
+# Optional: next/image cache
+public/cache/
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files
+.env*
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
