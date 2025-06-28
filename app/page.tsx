@@ -289,7 +289,7 @@ export default function SweetLoveApp() {
         giftAudioRef.current.pause()
         giftAudioRef.current.currentTime = 0
       }
-    }, 20000) // Delay to allow gift animation to finish
+    }, 83000) // Delay to allow gift animation to finish
   }
 
   const openLetter = () => {
@@ -359,7 +359,7 @@ export default function SweetLoveApp() {
       {/* Nút tắt/mở nhạc ở góc phải trên cùng */}
       {(musicPlayed || music2Played || music3Played) && (
         <button
-          className="fixed top-4 right-4 z-[10001] bg-white/80 hover:bg-white rounded-full p-2 shadow-lg border border-pink-200 transition-colors"
+          className="fixed top-4 left-4 z-[10001] bg-white/80 hover:bg-white rounded-full p-2 shadow-lg border border-pink-200 transition-colors"
           onClick={() => {
             setMusicOff((off) => {
               const newOff = !off
